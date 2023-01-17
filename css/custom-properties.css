@@ -1,14 +1,20 @@
 /* ===================================================
 FONTS AND VARIABLES
 =====================================================*/
+/* 
+url('../fonts/IBM/IBMPlexSansCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/IBM/IBMPlexSansCondensed-Regular.woff') format('woff'),
+url('../fonts/IBM/IBMPlexSansCondensed-Regular.ttf') format('truetype'),
+url('../fonts/IBM/IBMPlexSansCondensed-Regular.svg#icomoonregular') format('svg'); */
+
 
 @font-face {
   font-family: 'Caslon-RR';
   src: 
-         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf?#iefix') format('embedded-opentype'),
-         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf') format('woff'),
-         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf') format('truetype'),
-         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf#icomoonregular') format('svg');
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.woff') format('woff'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.ttf') format('truetype'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.svg#icomoonregular') format('svg');
 }
 
 @font-face {
