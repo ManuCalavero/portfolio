@@ -3,21 +3,31 @@
     margin: 16px 0 0;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .m-goal__text {
     position: relative;
     display: inline-block;
-    background-color: var(--c-bg-color);
-    width: 300px;
+    width: 260px;
     text-align: center;
     z-index: 2;
 }
 
-.m-goal:before {
+.m-goal__cell {
+    flex: 1;
+}
+
+.m-goal__cell--line {
+    flex: 1.5;
+    position: relative;
+}
+
+.m-goal__cell--line:before {
     content: "";
     position: absolute;
-    bottom: 9px;
     right: 0;
     left: 0;
     width: 100%;
