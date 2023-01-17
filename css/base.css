@@ -1,0 +1,120 @@
+/* ===================================================
+STYLES FOR ROOT ELEMENTs
+=====================================================*/
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--c-bg-color);
+  color: var(--c-text-color);
+  font-family: var(--f-text-regular);
+  font-size: 18px;
+  background-image: url("../images/bg-wall.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* SCOPE CLASSES */
+
+.-nav-item {
+  transition: opacity 280ms ease-in-out;
+  padding: 0 4px;
+  cursor: default;
+}
+
+.-nav-item:hover {
+  color: var(--c-amber-color);
+}
+
+.-nav-item + .-nav-item {
+  margin-left: 8px;
+}
+
+.-highlight {
+  color: var(--c-amber-color);
+}
+
+.-highlight-light {
+  color: yellow;
+}
+
+
+.-bold {
+  font-family: var(--f-text-bold);
+}
+
+.-uppercase {
+  text-transform: uppercase;
+}
+
+.-centered {
+  text-align: center;
+}
+
+.-small {
+  font-size: var(--fs-s-m);
+}
+
+.-highlight-light {
+  color: yellow;
+}
+
+.-veil {
+  opacity: 0.6;
+}
+
+/*SIZE*/
+
+.-fs-l-s {
+  font-size: var(--fs-l-s);
+  line-height: 1;
+}
+
+.-fs-m {
+  font-size: var(--fs-l);
+  line-height: 1;
+}
+
+.-fs-m-l {
+  font-size: var(--fs-m-l);
+}
+
+.-medium {
+  font-size: 20px;
+}
+
+@media (min-width: 1020px) {
+  .-fs-m {
+    font-size: var(--fs-xl-s);
+  }  
+}
+
+@media (min-width: 1420px) {
+  .-fs-m {
+    font-size: var(--fs-xl-s);
+  }  
+}
+
+@media (min-width: 1920px) {
+  .-fs-m {
+    font-size: var(--fs-xl-xl);
+  }  
+}

@@ -1,0 +1,101 @@
+/* ===================================================
+FONTS AND VARIABLES
+=====================================================*/
+
+@font-face {
+  font-family: 'Caslon-RR';
+  src: 
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf') format('woff'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf') format('truetype'),
+         url('../fonts/Caslon/Caslon-RR-Bold-ExtraCond.otf#icomoonregular') format('svg');
+}
+
+@font-face {
+  font-family: 'Archivo-Regular';
+  src: 
+         url('../fonts/archivo/Archivo-Regular.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/archivo/Archivo-Regular.otf') format('woff'),
+         url('../fonts/archivo/Archivo-Regular.otf') format('truetype'),
+         url('../fonts/archivo/Archivo-Regular.otf#icomoonregular') format('svg');
+}
+
+@font-face {
+  font-family: 'Archivo-Bold';
+  src: 
+         url('../fonts/archivo/Archivo-Bold.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/archivo/Archivo-Bold.otf') format('woff'),
+         url('../fonts/archivo/Archivo-Bold.otf') format('truetype');
+  font-weight: bold;
+}
+
+
+:root {
+  /*FONTS*/
+  --f-font-special:      Caslon-RR;
+  --f-text-regular:      Archivo-Regular;
+  --f-text-bold:         Archivo-Bold;
+
+  
+  /*COLORS*/
+  --c-bg-color:           #382823;
+  --c-nuclear-color:      #fff;
+  --c-text-color:         #f9f1d8;
+  --c-accent-text-color:  #338890;
+  --c-amber-color:        #f8620e;
+  --c-error-color:        #e9323a;
+  
+
+  /*SIZEZ*/
+
+  --fs-s-m:           14px;
+  --fs-s-l:           16px;
+  --fs-m-s:           20px;
+  --fs-m:             24px;
+  --fs-m-l:           32px;
+  --fs-l-s:           40px;
+  --fs-l:             48px;
+  --fs-l-l:           56px;
+  --fs-xl-s:          64px;
+  --fs-xl-l:          72px;
+  --fs-xl-xl:         80px;
+  --fs-xxl-s:         88px;
+  --fs-xxl-m:         120px;
+  --fs-xxl-xl:        160px; 
+}
+
+@keyframes itsCopied {
+	from {
+	  top: 80px;
+    opacity: 1;
+	}
+	to {
+		top: -130px;
+    opacity: 0.2;
+	}
+}
+
+@keyframes FadeIn {
+	from {
+    opacity: 0;
+	}
+
+  30% {
+    opacity: 0.1;
+	}
+
+	to {
+    opacity: 1;
+	}
+}
+
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+}
+  

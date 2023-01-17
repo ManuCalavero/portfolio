@@ -1,0 +1,56 @@
+.a-hyper-cta {
+    animation-name: FadeIn;
+	animation-duration: 1400ms;
+	animation-iteration-count: once;
+    display: none;
+    position: fixed;
+    top: -163px;
+    right: -160px;
+    transform: rotate(45deg);
+    padding: 56px;
+    width: 180px;
+    height: 180px;
+    background-color: var(--c-amber-color);
+    text-align: center;
+    cursor: default;
+    font-family: var(--f-text-bold);
+}
+
+.a-hyper-cta--text {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    font-size: var(--fs-m-s);
+    text-align: center;
+}
+
+@media screen and (min-width: 820px) {
+    .a-hyper-cta {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+
+    .a-hyper-cta {
+        transition: background-color 300ms ease-in-out;
+        top: -163px;
+        right: -160px;
+        padding: 56px;
+        width: 210px;
+        height: 210px;
+    }
+    .a-hyper-cta--text {
+        transition: color 280ms ease-in-out;
+        font-size: var(--fs-m-l);
+    }   
+
+    .a-hyper-cta:hover {
+        background-color: var(--c-amber-color);
+    }
+
+    .a-hyper-cta:hover .a-hyper-cta--text {
+        color: var(--c-bg-color);
+    }
+}

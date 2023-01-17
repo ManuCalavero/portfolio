@@ -1,0 +1,71 @@
+.a-title {
+    margin: 0;
+    font-family: var(--f-font-special);
+    font-weight: unset;
+}
+
+.a-title--s {
+    font-size: var(--fs-l);
+    line-height: 0.85;
+    margin-bottom: 32px;
+}
+
+.a-title--m {
+    font-size: var(--fs-xl-l);
+    line-height: 0.85;
+    margin-bottom: 32px;
+}
+
+.a-title--xxl {
+    font-size: 26vw;
+    line-height: 0.85;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.a-title--ghost {
+    margin-top: 16px;
+    color: white;
+    text-decoration: underline;
+} 
+
+.a-title--ghost:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1020px) {
+    .a-title--s {
+        font-size: var(--fs-l-l);
+        line-height: 0.85;
+        margin-bottom: 32px;
+    }
+
+    .a-title--xxl {
+        font-size: 25.5vw;
+        line-height: 0.88;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .a-title--m {
+        font-size: var(--fs-xxl-xl);
+        line-height: 0.85;
+    }
+
+    .a-title--xxl {
+        font-size: 25vw
+    }    
+}
+
+@media screen and (min-width: 1400px) {
+    .a-title--xxl {
+        font-size: 25.3vw
+    }    
+  }
+
+@media screen and (min-width: 1900px) {
+    .a-title--xxl {
+        font-size: 25.5vw
+    }    
+  }

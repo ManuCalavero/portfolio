@@ -1,0 +1,148 @@
+.o-footer {
+	position: relative;
+	margin-top: 132px;
+	padding: 72px 0;
+	background-color: var(--c-amber-color);
+	/* background-color: #389C59; */
+	color: var(--c-bg-color);
+	font-size: var(--fs-l-s);
+}
+
+.o-footer__wrapper {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.o-footer__list {
+	margin: 0;
+	padding: 0;
+	font-family: var(--f-text-bold);
+}
+
+.o-footer__list-item a {
+	color: var(--c-bg-color);
+}
+
+.o-footer--footnote {
+	text-align: center;
+}
+
+.o-footer__seal {
+	transform: scale(0.45);
+	position: absolute;
+	right: 16px;
+	top: -120px;
+	width: 303px;
+	height: 303px;
+}
+
+.o-footer__seal-1 {
+	position: absolute;
+	width: 304px;
+	height: 304px;
+	z-index: 1;
+}
+
+.o-footer__seal-2 {
+	animation: rotation 12s infinite linear;
+	position: absolute;
+	z-index: 2;
+	width: 303px;
+	height: 303px;
+}
+
+.o-footer__wrapper--cell + .o-footer__wrapper--cell {
+	margin-top: 72px;
+} 
+
+@media (min-width: 1020px) {
+	.o-footer {
+		margin-top: 232px;
+		padding: 120px 0 32px
+	}
+
+	.o-footer__seal {
+		transform: scale(1);
+		right: 160px;
+	}
+
+	.o-footer__wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	
+	.o-footer__wrapper--cell {
+		overflow: hidden;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		align-items: top;
+		justify-content: top;
+	}
+
+	.o-footer__list {
+		font-size: var(--fs-l-l);	
+	}
+
+	.o-footer__wrapper--cell:last-child {
+		flex: 2;
+	}
+
+	.o-footer__wrapper--cell + .o-footer__wrapper--cell {
+		margin-top: 0;
+	} 
+	
+
+	.o-footer__list-item a:hover {
+		text-decoration: none;
+	}	
+
+	.o-footer__wrapper--cell-small {
+		font-size: 20px;
+	}
+}
+
+.o-footer__copy-wrapper {
+	position: relative;
+	width: 480px;
+}
+
+.o-footer__copy-email {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+}
+
+.o-footer__copy-email {
+	position: relative;
+	transition: background-color 180ms ease-in-out;
+	appearance: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 32px;
+	border: none;
+	color: var(--nuclear);
+	fill: #fff;
+}
+
+.o-footer__copy-email--success {
+	display: none;
+	padding: 8px 16px;
+	text-align: center;
+	border-radius: 7px;
+	font-size: 20px;
+	background-color: var(--c-nuclear-color);
+	color: var(--c-amber-color);
+}
+
+.-is-visible {  
+	display: block;
+	animation-name: itsCopied;
+	animation-duration: 1400ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+	position: absolute;
+	right: 0;
+}

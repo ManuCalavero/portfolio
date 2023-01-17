@@ -1,0 +1,14 @@
+.o-main {
+  position: relative;
+}
+
+.o-main__wrapper {
+  position: relative;
+  padding: 0 8px;
+}
+
+@media (min-width: 820px) {
+  .o-main__wrapper {
+    padding: 0 16px;
+  }
+}

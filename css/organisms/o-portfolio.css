@@ -1,0 +1,113 @@
+.o-portfolio {
+    margin: 72px 0 132px;
+    text-align: center;
+}
+
+.o-portfolio__list {
+    margin: 0;
+    padding: 0;
+    font-size: 15vw;
+}
+
+.o-portfolio__item {
+    position: relative;
+}
+
+.o-portfolio__poster {
+    transition: opacity 320ms ease-in;
+    visibility: hidden;
+    width: 520px;
+    height: 316px;
+    background-color: #fff;
+    position: absolute;
+    top: -194px;
+    right: 320px;
+    opacity: 0;
+    z-index: -2;
+}
+
+.o-portfolio--code {
+    background-image: url("../../images/portfolio/gf-portfolio-cc.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 220px;
+}
+
+.o-portfolio--wetaca {
+    background-image: url("../../images/portfolio/gf-portfolio.wetaca.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: auto;
+    left: 120px;
+}
+
+.o-portfolio--boton {
+    background-image: url("../../images/portfolio/gf-portfolio-boton.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 120px;
+}
+
+
+.o-portfolio--pc {
+    background-image: url("../../images/portfolio/gf-portfolio-PC.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: auto;
+    left: -10px;
+}
+
+.o-portfolio--trive {
+    background-image: url("../../images/portfolio/gf-portfolio-trive.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 220px;
+}
+
+.o-portfolio--syn {
+    background-image: url("../../images/portfolio/gf-portfolio-syn.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 220px;
+}
+
+.o-portfolio--glw {
+    background-image: url("../../images/portfolio/gf-portfolio-glw.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 220px;
+}
+
+@media screen and (min-width: 1020px) {
+    .o-portfolio {
+        margin: 280px auto 200px;
+    }
+
+    .o-portfolio__list {
+        font-size: 10vw;
+    }
+    
+
+    .o-portfolio__item {
+        cursor: default;
+    }
+
+    .o-portfolio__item span {
+        transition: opacity 300ms ease-in-out;
+        cursor: default;
+    }
+
+    .o-portfolio__item:hover .o-portfolio__poster {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .o-portfolio__item:hover span {
+        opacity: 0.3;
+    }
+
+    .o-portfolio__item:last-child:hover {
+        text-decoration: underline;
+    }
+}
