@@ -1,6 +1,6 @@
 .a-title {
     margin: 0;
-    font-family: 'Fira-Regular';
+    font-family: var(--f-font-special);
     font-weight: unset;
 }
 
