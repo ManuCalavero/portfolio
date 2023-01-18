@@ -14,7 +14,7 @@
     font-size: var(--fs-m-s);
 }
 
-.o-layout__cell span {
+.o-layout__cell-pill {
     display: inline-block;
     margin: 8px 7px 8px 0;
     padding: 4px 20px;
@@ -45,7 +45,7 @@
         font-size: var(--fs-m);
     }
 
-    .o-layout__cell span {
+    .o-layout__cell-pill {
         font-size: 32px;
     }
 
@@ -65,18 +65,17 @@
 
 
 @media screen and (min-width: 1300px) {
-    .o-layout__cell span {
+    .o-layout__cell-pill {
         font-size: 40px;
     }
   }
-
 
   @media screen and (min-width: 1600px) {
     .o-layout__cell--columns {
         padding-right: 272px;
     }    
 
-    .o-layout__cell span {
+    .o-layout__cell-pill {
         font-size: 56px;
     }
     
