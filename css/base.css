@@ -93,7 +93,7 @@ body {
 .-about-gif {
  display: inline-block;
  width: 100%;
- max-width: 420px;
+ max-width: 300px;
  height: auto;
  margin: 16px auto;
 }
