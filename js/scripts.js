@@ -31,6 +31,12 @@ function clickAnchor(){
       scrollTop: $(".-js-contact").offset().top
     }, 1200);
   });
+
+  $(".-js-about-trigger").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".-js-about").offset().top
+    }, 1200);
+  });
 }
 
 

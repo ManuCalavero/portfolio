@@ -33,6 +33,16 @@ body {
 
 /* SCOPE CLASSES */
 
+.-link {
+  margin-top: 16px;
+  color: var(--c-nuclear-color);
+  text-decoration: none;
+}
+
+.-link:hover {
+  color: var(--c-amber-color);
+}
+
 .-nav-item {
   transition: opacity 280ms ease-in-out;
   padding: 0 4px;
@@ -78,6 +88,14 @@ body {
 
 .-veil {
   opacity: 0.6;
+}
+
+.-about-gif {
+ display: inline-block;
+ width: 100%;
+ max-width: 420px;
+ height: auto;
+ margin: 16px auto;
 }
 
 /*SIZE*/

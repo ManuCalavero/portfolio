@@ -5,8 +5,11 @@
 	background-color: var(--c-amber-color);
 	/* background-color: #389C59; */
 	color: var(--c-bg-color);
-	font-size: var(--fs-l-s);
 }
+
+.o-footer--title {
+	font-size: 32px;
+} 
 
 .o-footer .o-footer__wrapper--cell {
 	overflow: visible;
@@ -25,6 +28,7 @@
 
 .o-footer__list-item a {
 	color: var(--c-bg-color);
+	font-size: 40px;
 }
 
 .o-footer--footnote {
@@ -35,7 +39,7 @@
 .o-footer__seal {
 	transform: scale(0.45);
 	position: absolute;
-	right: -32px;
+	right: -60px;
 	top: -120px;
 	width: 303px;
 	height: 303px;

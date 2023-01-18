@@ -30,7 +30,7 @@
   <body>
     <div class="o-loader -js-loader">
       <div class="o-loader__wrapper">
-        <p class="o-loader__wrapper--title">Manu Marquez digital portfolio 2023</p>
+        <p class="o-loader__wrapper--title">Manu Marquez digital portfolio '23</p>
         <p>Please wait</p>
       </div>
     </div>
@@ -58,8 +58,8 @@
             </div>
             <div class="o-splash__sub-header--cell">
               <span class="-nav-item -js-contact-trigger-nav">Contact</span>
-              <span class="-nav-item">About</span>
-              <span class="-nav-item">Resume</span>
+              <span class="-nav-item -js-about-trigger">About</span>
+              <!-- <span class="-nav-item">Resume</span> -->
             </div>
           </nav>
           <img class="o-splash--image" src="images/img-its-me.png">
@@ -152,6 +152,30 @@
           </div>
         </div>
 
+      <div class="o-layout -js-about">
+        <div class="o-layout__row -centered">
+          <div class="o-layout__cell">
+          </div>
+          <div class="o-layout__cell">
+            <p class="a-title a-title--s -highlight">About</p>
+            <p>Born in 80's, raised in the 90's. </p>
+            <p class="-veil">As about section still in progress, here it's a gif of me and things that love and inspire me to design. Also a link to my Spotify. Hope it helps.</p>
+          </div>
+          <div class="o-layout__cell">
+          </div>
+        </div>
+        <div class="o-layout__row">
+          <div class="o-layout__cell">
+          </div>
+          <div class="o-layout__cell -fs-m-l -centered">
+            <img class="-about-gif" src="images/about.gif">
+            <a class="-link -small" target="_blank" href="https://open.spotify.com/user/11130679118">My spotify</a>
+          </div>
+          <div class="o-layout__cell">
+          </div>
+        </div>
+      </div>
+
       <!--END MAIN WRAPPER-->
       </div>
       <footer class="o-footer -js-contact">
@@ -162,7 +186,7 @@
         </div>
         <div class="o-footer__wrapper">
           <div class="o-footer__wrapper--cell">
-           <p>■ Links</p>
+           <p class="o-footer--title">■ Links</p>
            <ol class="o-footer__list">
               <li class="o-footer__list-item"><a target="_blank" href="https://www.linkedin.com/in/manumarquez/">LinkedIn</a></li>
               <li class="o-footer__list-item"><a target="_blank" href="https://www.instagram.com/calavero/?hl=es">Instagram</a></li>
@@ -171,13 +195,12 @@
            </ol>
           
           </div>
-          <div class="o-footer__wrapper--cell">
-            <p>■ Still here?</p>
-            <p class="-medium">You courious, right?. Me too. Mail me and maybe we can meet and share about what we are courious about. For sure it will be nice.</p>
-            
-
-            <div class="o-footer__copy-wrapper">
-              <p class="">■ Write me (click to copy) </p>
+          <div style="margin-top: 32px;" class="o-footer__wrapper--cell">
+            <p class="o-footer--title">■ Still here?</p>
+            <p class="-medium">You courious, right? Me too. Mail me and maybe we can meet and share about what we are courious about. For sure it will be nice.</p>
+          
+            <div style="margin-top: 32px;" class="o-footer__copy-wrapper">
+              <p class="o-footer--title">■ Write me (click to copy) </p>
               <button type="button" class="o-footer__copy-email -js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="hola@manumarquez.info" title="Copy to clipboard">
                 <p class="" href="mailto:hola@manumarquez.info">hola@manumarquez.info</p>
                 <svg fill="black" class="o-footer--icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
@@ -186,11 +209,6 @@
               </button>
               <div class="o-footer__copy-email--success -c-acid">Copied to clipboard!</div>
             </div>
-
-
-
-
-
            </div>
           
           </div>

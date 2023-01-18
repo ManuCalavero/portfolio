@@ -6,6 +6,7 @@
 }
 
 .o-layout__cell {
+    flex-direction: column;
     font-size: var(--fs-m-s);
 }
 
