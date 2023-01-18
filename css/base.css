@@ -35,7 +35,7 @@ body {
 
 .-link {
   margin-top: 16px;
-  color: var(--c-nuclear-color);
+  color: var(--c-text-color);
   text-decoration: none;
 }
 
