@@ -10,7 +10,6 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: var(--c-bg-color);
   color: var(--c-text-color);
   font-family: var(--f-text-regular);
   font-size: 18px;
@@ -29,6 +28,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: var(--c-bg-color);
 }
 
 /* SCOPE CLASSES */

@@ -8,6 +8,10 @@
 	font-size: var(--fs-l-s);
 }
 
+.o-footer .o-footer__wrapper--cell {
+	overflow: visible;
+}
+
 .o-footer__wrapper {
 	max-width: 90%;
 	margin: 0 auto;
