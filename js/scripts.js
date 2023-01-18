@@ -70,10 +70,17 @@ function copyToClipboard(text, el) {
   }, 1500);
 }
 
+
+function hideModal(){
+  $('.-js-loader').delay(4400).fadeOut();
+}
+
+
 $(document).ready(function(){
   // we call the function
   scrollFades();
   clickAnchor();
+  hideModal();
 
   $('.-js-copy').click(function() {
     var text = $(this).attr('data-copy');

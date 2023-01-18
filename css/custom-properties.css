@@ -99,4 +99,17 @@ FONTS AND VARIABLES
 	  transform: rotate(359deg);
 	}
 }
+
+@keyframes modalColor {
+	0% {
+	  background-color:  var(--c-amber-color);
+	}
+  80% {
+	  background-color:  var(--c-amber-color);
+	}
+	100% {
+	  background-color:  var(--c-bg-color);
+	}
+}
   
+
