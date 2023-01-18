@@ -8,7 +8,7 @@
 }
 
 .o-footer--title {
-	font-size: 32px;
+	font-size: 28px;
 } 
 
 .o-footer .o-footer__wrapper--cell {
@@ -100,8 +100,11 @@
 
 	.o-footer__wrapper--cell + .o-footer__wrapper--cell {
 		margin-top: 0;
+	}
+
+	.o-footer--title {
+		font-size: 32px;
 	} 
-	
 
 	.o-footer__list-item a:hover {
 		text-decoration: none;

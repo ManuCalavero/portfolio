@@ -5,6 +5,10 @@
     margin-top: 32px;
 }
 
+.o-layout + .o-layout {
+    margin-top: 80px;
+}
+
 .o-layout__cell {
     flex-direction: column;
     font-size: var(--fs-m-s);
@@ -17,13 +21,16 @@
     border-radius: 50px;
     background-color: var(--c-nuclear-color);
     color: var(--c-bg-color);
-    font-size: 32px;
 }
 
 
 @media screen and (min-width: 1020px) {
     .o-layout {
         margin-top: 72px;
+    }
+
+    .o-layout + .o-layout {
+        margin-top: 180px;
     }
     
     .o-layout__row {
@@ -36,6 +43,10 @@
         display: flex;
         flex: 1;
         font-size: var(--fs-m);
+    }
+
+    .o-layout__cell span {
+        font-size: 32px;
     }
 
     .o-layout__cell--double {
