@@ -59,7 +59,7 @@
         display: block;
         column-count: 2;
         column-gap: 56px;
-        padding-right: 72px;
+        padding: 72px;
     }
 }
 
