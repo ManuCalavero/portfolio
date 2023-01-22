@@ -24,6 +24,15 @@
     white-space: nowrap;
 }
 
+
+.a-title--xl {
+    font-size: 10.85vw;
+    line-height: 0.85;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .a-title--ghost {
     margin-top: 16px;
     color: white;
