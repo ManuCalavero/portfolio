@@ -24,6 +24,10 @@
     flex: 1;
 }
 
+.o-splash__sub-header--cell-double {
+    flex: 2.5;
+}
+
 .o-splash__sub-header--cell:last-child {
     text-align: right;
     display: none;
