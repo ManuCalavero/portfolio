@@ -51,7 +51,7 @@
 
     .o-layout__cell--double {
         display: flex;
-        flex: 2;
+        flex: 3.5;
         font-size: var(--fs-m);
       }
 
@@ -74,5 +74,4 @@
     .o-layout__cell-pill {
         font-size: 56px;
     }
-    
   }

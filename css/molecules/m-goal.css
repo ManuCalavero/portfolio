@@ -43,7 +43,7 @@
 @media screen and (min-width: 720px) {
     .m-goal__text {
         font-size: var(--fs-m-s);
-        width: 420px;
+        width: 400px;
     }
 }
 
