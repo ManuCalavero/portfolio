@@ -84,6 +84,22 @@
     right: 220px;
 }
 
+.o-portfolio--class {
+    background-image: url("../../images/portfolio/gf-portfolio-cc.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 220px;
+}
+
+.o-portfolio--leemons {
+    background-image: url("../../images/portfolio/gf-portfolio-cc.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 220px;
+}
+
+
+
 @media screen and (min-width: 1020px) {
     .o-portfolio {
         margin: 280px auto 200px;
