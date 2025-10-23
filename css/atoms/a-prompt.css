@@ -1,0 +1,28 @@
+.a-prompt {
+    position: relative;
+    background: linear-gradient(to right, #9691C1, #E0A9E5);
+    padding: 2px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+}
+
+.a-prompt__wrapper {
+    border-radius: 6px;
+    padding: 32px;
+    background-color: var(--c-bg-color);
+}
+
+.a-prompt p {
+  font-size: 15px;
+  line-height: 1.5;
+} 
+
+
+
+@media (min-width: 1020px) {
+    .-o-about {
+        padding: 220px 0;
+    }
+}

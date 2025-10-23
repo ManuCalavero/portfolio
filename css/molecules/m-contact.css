@@ -1,0 +1,74 @@
+.m-contact {
+    position: relative;
+    padding: 120px 0 0;
+}
+
+.m-contact__wrapper {
+    overflow: hidden;
+    position: relative;
+    max-width: 642px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.m-contact__copy-email {
+    transition: all 180ms ease-in-out;
+    position: relative;
+	appearance: none;
+	margin: 16px auto;
+	padding: 8px 32px;
+	border-radius: 125px;
+	border: 1px solid var(--c-amber-color);
+    background-color: transparent;
+    color: var(--c-amber-color);
+	font-size: var(--fs-s-l);
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.m-contact__copy-email:hover {
+	opacity: 0.5;
+}
+
+
+.m-contact__copy-email--success {
+	display: none;
+	padding: 8px 16px;
+	text-align: center;
+	border-radius: 7px;
+	font-size: 20px;
+	color: var(--c-succes-color);
+    right: 0;
+}
+
+.m-contact--icon {
+	display: inline-block;
+	margin: 8px 0 0 8px;
+}
+
+.m-contact--icon path {
+    fill: var(--c-amber-color);
+}
+
+.-is-visible {  
+	display: block;
+	animation-name: itsCopied;
+	animation-duration: 1400ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+	position: absolute;
+}
+
+
+@media screen and (min-width: 1020px) {
+    .m-contact {
+        margin-top: var(--fs-xxl-xl);
+        padding: 0;
+    }
+
+    .m-contact__copy-email {
+        font-size: var(--fs-l);
+    }
+}

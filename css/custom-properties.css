@@ -3,47 +3,44 @@ FONTS AND VARIABLES
 =====================================================*/
 
 @font-face {
-  font-family: 'Caslon-RR';
+  font-family: 'Inter';
   src: 
-         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.otf?#iefix') format('embedded-opentype'),
-         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.woff') format('woff'),
-         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.ttf') format('truetype'),
-         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.svg#icomoonregular') format('svg');
+         url('../fonts/inter/Inter.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/inter/Inter.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/inter/Inter.woff') format('woff'),
+         url('../fonts/inter/Inter.woff2') format('woff2'),
+         url('../fonts/inter/Inter.ttf') format('truetype'),
+         url('../fonts/inter/Inter.svg#icomoonregular') format('svg');
 }
 
 @font-face {
-  font-family: 'Archivo-Regular';
+  font-family: 'Inter-Italic';
   src: 
-         url('../fonts/archivo/Archivo-Regular.otf?#iefix') format('embedded-opentype'),
-         url('../fonts/archivo/Archivo-Regular.otf') format('woff'),
-         url('../fonts/archivo/Archivo-Regular.otf') format('truetype'),
-         url('../fonts/archivo/Archivo-Regular.otf#icomoonregular') format('svg');
-}
-
-@font-face {
-  font-family: 'Archivo-Bold';
-  src: 
-         url('../fonts/archivo/Archivo-Bold.otf?#iefix') format('embedded-opentype'),
-         url('../fonts/archivo/Archivo-Bold.otf') format('woff'),
-         url('../fonts/archivo/Archivo-Bold.otf') format('truetype');
-  font-weight: bold;
+         url('../fonts/inter/Inter-Italic.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/inter/Inter-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/inter/Inter-Italic.woff') format('woff'),
+         url('../fonts/inter/Inter-Italic.woff2') format('woff2'),
+         url('../fonts/inter/Inter-Italic.ttf') format('truetype'),
+         url('../fonts/inter/Inter-Italic.svg#icomoonregular') format('svg');
 }
 
 
 :root {
   /*FONTS*/
-  --f-font-special:      Caslon-RR;
-  --f-text-regular:      Archivo-Regular;
+  --f-font-special:      Inter;
+  --f-text-regular:      Inter;
   --f-text-bold:         Archivo-Bold;
 
   
   /*COLORS*/
-  --c-bg-color:           #342019;
+  --c-bg-color:           #fff;
   --c-nuclear-color:      #fff;
-  --c-text-color:         #f9f1d8;
+  --c-pearl:              #F6F4F1;
+  --c-text-color:         #312A28;
+  --c-dark-color:         #312A28;
   --c-accent-text-color:  #338890;
   --c-amber-color:        #f8620e;
+  --c-succes-color:       #4BB543;
   --c-error-color:        #e9323a;
   
 

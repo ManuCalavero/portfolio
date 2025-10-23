@@ -1,0 +1,122 @@
+.a-skill-list {
+    --speed: calc(var(--carousel-items-count) * var(--carousel-speed) * 1s);
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: var(--fs-m-l);
+    padding-bottom: var(--fs-m-l);
+    background-color: var(--c-dark-color);
+}
+
+.a-skill-list__wrapper {
+    --item-indent: 1.3rem;
+    display: flex;
+    flex-shrink: 0;
+    padding: 0;
+    list-style: none;
+    animation: scroll-logos var(--speed) infinite linear;
+
+    .list:hover & {
+        animation-play-state: paused;
+    }
+
+    &--static {
+        animation: none;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        width: calc(100% + var(--item-indent) * 2);
+        margin: calc(-1 * var(--item-indent)) calc(-1 * var(--item-indent)) 0;
+        justify-content: space-around;
+    }
+}
+
+.a-skill-list__item {
+    flex-shrink: 0;
+    scroll-snap-stop: always;
+    container-type: scroll-state;
+    color: var(--c-nuclear-color);
+    text-transform: uppercase;
+}
+
+.a-skill-list__item + .a-skill-list__item {
+    margin-left: var(--fs-m-l);
+}
+
+
+@keyframes scroll-logos {
+  0% {
+    transform: translate(0,0)
+  }
+  100% {
+    transform: translate(-100%,0)
+  }
+}
+
+
+.list {
+  --speed: calc(var(--carousel-items-count) * var(--carousel-speed) * 1s);
+
+  display: flex;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.list__wrapper {
+  --item-indent: 1.3rem;
+
+  display: flex;
+  flex-shrink: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: calc(-1 * var(--item-indent));
+  animation: scroll-logos var(--speed) infinite linear;
+
+  .list:hover & {
+    animation-play-state: paused;
+  }
+
+  &--static {
+    animation: none;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    width: calc(100% + var(--item-indent) * 2);
+    margin: calc(-1 * var(--item-indent)) calc(-1 * var(--item-indent)) 0;
+    justify-content: space-around;
+  }
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translate(0,0)
+  }
+  100% {
+    transform: translate(-100%,0)
+  }
+}
+
+.list__item {
+  flex-shrink: 0;
+  margin: var(--item-indent) var(--item-indent) 0;
+}
+
+.list__image {
+  display: block;
+  height: 100px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: .8;
+
+  &:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .a-skill-list {
+      margin-bottom: var(--fs-xxl-xl);
+  }
+}

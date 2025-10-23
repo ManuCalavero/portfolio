@@ -1,9 +1,23 @@
 .o-header {
+  display: flex;
+  align-items: center;
   position: fixed;
-  top: 8px;
-  right: 8px;
+  padding: 16px;
+  top: 0;
+  right: 0;
   left: 0;
   z-index: 11;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.o-header p,
+.o-header nav {
+  flex: 1;
+}
+
+.o-header .-link {
+  margin-top: 0;
 }
 
 .o-header__inner {
@@ -70,12 +84,8 @@
 
 @media (min-width: 820px) {
   .o-header {
-    top: 16px;
-    right: 16px;
-  }
-
-  .o-header__inner {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -120,3 +130,12 @@
   visibility: visible;
   opacity: 1;
 }
+
+
+@media screen and (min-width: 1020px) {
+  .o-header {
+    padding: 24px;
+    font-size: 18px;
+  }
+}
+

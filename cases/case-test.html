@@ -17,20 +17,465 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 0 40px;
+        }
+
+        .back-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 60px;
+            max-width: 800px;
+        }
+
+        /* Project Info */
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 40px;
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 80px;
+        }
+
+        .info-item h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .info-item p {
+            font-size: 16px;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: 600px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            margin-bottom: 100px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 120px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        /* Challenge Section */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .challenge-card {
+            padding: 40px;
+            background: #fafafa;
+            border-radius: 12px;
+        }
+
+        .challenge-card h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .challenge-card p {
+            font-size: 16px;
+        }
+
+        /* Exploration Section */
+        .exploration {
+            margin-bottom: 80px;
+        }
+
+        .exploration-header {
+            margin-bottom: 40px;
+        }
+
+        .exploration-number {
+            font-size: 14px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .exploration h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .exploration-description {
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .image-grid.two-col {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .image-grid.single {
+            grid-template-columns: 1fr;
+        }
+
+        .image-container {
+            width: 100%;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: #fafafa;
+            padding: 80px 0;
+            margin: 100px 0;
+        }
+
+        .impact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+        }
+
+        /* Next Project */
+        .next-project {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .next-project h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .next-project-link {
+            display: inline-block;
+            padding: 16px 40px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .next-project-link:hover {
+            transform: translateY(-2px);
+            background: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .image-grid.two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
   </head>
 
-  <body>
-    <!--MAIN CONTAINER-->
-    <main class="o-main">
-      <!--MAIN WRAPPER-->
-      <div class="o-main__wrapper">
-          <div class="o-case">
-            <h1 class="a-title a-title--xl">codeCandy</h1>
-          </div>
-      
+    <body>
+         <header>
+            <div class="container">
+                <a href="/" class="back-link">← Volver al Portfolio</a>
+                <h1>Clasing</h1>
+                <p class="o-case--subtitle">Clasing es una edtech con crecimiento exponencial. Además de un crecimiento muy rápido de estaban desarrollando múltiples productos simultáneamente: un nuevo portal de estudiantes, un portal de RRHH, un backoffice y una app de ejercicios. Me incorporé como Product Manager con el reto de ordenar la entrega, alinear los equipos y devolverle ritmo y claridad al producto.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Project Info -->
+            <div class="project-info">
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>Clasing</p>
+                </div>
+                <div class="info-item">
+                    <h3>Timeline</h3>
+                    <p>Diciembre 2024 - X</p>
+                </div>
+                <div class="info-item">
+                    <h3>Rol</h3>
+                    <p>Product Manager</p>
+                </div>
+                <div class="info-item">
+                    <h3>Team</h3>
+                    <p>01 Product Designer<br>02 Product Manager<br>03 Ops Manager</p>
+                </div>
+            </div>
+             <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=600&fit=crop" alt="Project Hero">
+            </div>
+
+            <section class="section">
+                <div class="section-label">RESUMEN RÁPIDO</div>
+                <h2>2. Descripción del Proyecto</h2>
+                <p class="o-case--paragraph">La compañía estaba intentando escalar sin una base operativa sólida. Los equipos trabajaban en paralelo, sin priorización ni validación temprana.</p>
+                <p class="o-case--paragraph">No existían procesos de diseño ni estimaciones, y cualquier contratiempo menor se convertía en un cuello de botella importante.</p>
+                <p class="o-case--paragraph">Además, con la irrupción de la IA, la empresa corría el riesgo de quedarse atrás tecnológicamente si no mejoraba su capacidad de adaptación.</p>
+                <br>
+                <h3>Diagnóstico inicial</h3>
+                <br>
+                <p class="o-case--paragraph">Tras una auditoría interna y una primera sesión con los equipos, identificamos tres áreas clave de intervención:</p>
+                <ul class="o-case--list">
+                    <li>1.Área de ejecución.</li>
+                    <li>2.Área operativa.</li>
+                    <li>3.Área de comunicación.</li>
+                </ul>
+                <br>
+                <p class="o-case--paragraph">Los principales problemas detectados fueron:</p>
+                <ul class="o-case--list">
+                    <li>Equipos desalineados y con baja comunicación interdepartamental.</li>
+                    <li>Ausencia de procesos de priorización y estimación.</li>
+                    <li>Tendencia a abordar soluciones complejas sin validar hipótesis simples.</li>
+                    <li>Desconexión con negocio: los equipos de ventas no entendían los productos ni sus tiempos de entrega.</li>
+                    <li>Pérdida de foco de usuario: se construía en base a urgencias internas, no a necesidades validadas.</li> 
+                </ul>
+            </section>
+
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=600&fit=crop" alt="Project Hero">
+            </div>
+
+            <!-- Overview Section -->
+            <section class="section">
+                <h2>Área operativa</h2>
+                <br>
+                <h3>Descubrir y ordenar el caos</h3>
+                <br>
+                <p class="o-case--paragraph">Mi primer trabajo fue mapear todos los departamentos y procesos de Clasing. Aquí mi principal partner fue RRHH: juntos registramos necesidades, dependencias y definimos responsabilidades de equipos y personas.</p>
+                <p class="o-case--paragraph">Con estas sesiones detectamos que el problema no era técnico, sino estructural: faltaba una capa operativa que conectara la estrategia con la ejecución.</p>
+                <h3><br>Construir la base</h3>
+                <br>
+                <p class="o-case--paragraph">Para resolverlo, comenzamos a crear esa capa operativa desde cero:</p>
+                <ul class="o-case--list">
+                    <li>Hicimos discoveries con usuarios y stakeholders, para volver a conectar decisiones con necesidades reales.</li>
+                    <li>Organizamos workshops interdepartamentales con ventas, diseño, tech y marketing, aplicando dinámicas de Design Thinking para alinear mentalidades y visualizar dependencias.</li>
+                </ul>
+                <p class="o-case--paragraph">De esos talleres nació un roadmap transversal, priorizado por impacto y viabilidad, que convirtió la dispersión en una visión compartida</p>
+                <h3><br>Procesos y herramientas</h3>
+                <p class="o-case--paragraph"><br>También establecimos nuevas herramientas y rutinas internas:</p>
+                 <ul class="o-case--list">
+                    <li>Notion como hub único.</li>
+                    <li>Sistema de tickets y estimaciones semanales.</li>
+                    <li>Primeras nociones de Agile y trabajo por sprints.</li>
+                </ul>
+                <p class="o-case--paragraph"><br>Implementar estas prácticas fue como darnos a todos un GPS para movernos rápido sin chocarnos.</p>
+                <p class="o-case--paragraph">Gracias a las dailies y la nueva visibilidad, por primera vez la empresa sabía hacia dónde iba. Y como resultado tangible: el 80% del roadmap se cumplió dentro del tiempo estimado, algo notable en un entorno previamente caótico.</p>
+            </section>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=600&fit=crop" alt="Project Hero">
+            </div>
+
+             <!-- Overview Section -->
+            <section class="section">
+                <h2>Área de ejecución</h2>
+                <br>
+                <h3>Crear Ari: la capa de inteligencia artificial de Clasing.</h3>
+                <br>
+                <p class="o-case--paragraph">Con el equipo ya alineado, tomamos algunas decisiones difíciles de personal y nos preparamos para el siguiente paso: Ari, la nueva capa de inteligencia artificial de Clasing.</p>
+                <p class="o-case--paragraph">El nombre —que propuse yo— nació en homenaje a un proyecto primitivo de la compañía y a dos personas clave, Adri y Ali.</p>
+                <p class="o-case--paragraph">Ari se convirtió rápidamente en la gran propuesta de valor de Clasing, impulsando tanto la experiencia de usuario como las ventas.</p>
+                <br>
+                <h3>De la idea al impacto.</h3>
+                <br>
+                <p class="o-case--paragraph">En solo dos meses lanzamos funcionalidades que antes habrían parecido imposibles:</p>
+                <ul class="o-case--list">
+                    <li><strong>Asistente de roleplays</strong>: simulaciones con feedback instantáneo, perfecto para estudiantes que necesitaban practicar sin el compromiso de una clases.</li>
+                    <li><strong>Prueba de nivel por voz inteligente</strong>: evaluaciones personalizadas que se adaptan al estilo de aprendizaje de cada usuario.</li>
+                    <li><strong>Asistente inteligente según perfil</strong>: rutas de aprendizaje y recomendaciones personalizadas.</li>
+                </ul>
+                <p class="o-case--paragraph"><br>No eran solo features nuevas, eran nuevas formas de aprender.</p>
+            </section>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=600&fit=crop" alt="Project Hero">
+            </div>
+
+             <!-- Overview Section -->
+            <section class="section">
+                <h2>Área de comunicación</h2>
+                <br>
+                <h3>Darle voz a lo que construimos</h3>
+                <br>
+                <p class="o-case--paragraph">Paralelamente al desarrollo, era evidente que todos estas nuevas features había que contarlas bien. Y ahí surgió un problema que muchos no veían: Clasing estaba invirtiendo mucho tiempo en una identidad de marca errónea.</p>
+                <p class="o-case--paragraph">Gracias a mi paso por Wetaca con Gabriela Lendo, pude detectar que esa identidad estaba obsoleta y desconectada de los valores reales del equipo, que giraban en torno a la pasión, autenticidad y honestidad</p>
+                <p class="o-case--paragraph">Así que invertimos un poco de tiempo en darle un nuevo enfoque en el que:</p> 
+                <ul class="o-case--list">
+                    <li>Supervisé la dirección de arte y mensaje en las propuestas comerciales, guiando al equipo para que las comunicaciones reflejaran los valores reales de Clasing.</li>
+                    <li>Definimos unas bases mínimas para la identidad de marca, lo suficiente para que un especialista pudiera desarrollar la nueva identidad sobre insights reales.</li>
+                    <li>Identificamos que la identidad previa no nos diferenciaba de nuestros competidores, ni en estilo ni en forma. Las nuevas bases nos devolvieron la libertad de contar Clasing desde la honestidad.</li>
+                </ul>
+                <p class="o-case--paragraph"><br>Era como ponerle voz y cara a todo el trabajo que Ari y el equipo habían hecho. La ejecución era la magia, la comunicación era el espejo que la reflejaba al mundo, y ahora además era verdadera.</p>
+            </section>
+
+             <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&h=600&fit=crop" alt="Project Hero">
+            </div>
+
+            <section class="section">
+                <div class="section-label"></div>
+                <h2>5. Aprendizajes</h2>
+                <p class="o-case--paragraph"><br>El cambio cultural fue tan fuerte como el técnico. El equipo, antes fragmentado, comenzó a coordinarse de forma natural. Había ownership, comunicación y curiosidad.</p>
+                <p class="o-case--paragraph">Algunas de las cosas que confirmamos fueron:</p>
+                <ul class="o-case--list">
+                    <li>La velocidad no depende del ritmo de trabajo, sino de la claridad compartida.</li>
+                    <li>Ordenar la casa primero permite ejecutar rápido y con impacto.</li>
+                    <li>Construir funcionalidades avanzadas es solo la mitad del trabajo; comunicar el valor de forma auténtica es igual de crítico.</li>
+                    <li>Equipos alineados, decisiones claras y sistemas simples transforman la capacidad de entrega de una empresa.</li>
+                    <li>Tener partners clave como RRHH (Gracias Deb) hace que la coordinación y el aprendizaje iterativo sean mucho más naturales. Y sobre todo sienta las bases para que esos cimientos se mantengan en la cultura.</li>
+                    <li>Aplicar principios de Design Thinking y Agile permitió mantener la curiosidad, iterar sin miedo y aprender mientras avanzábamos.</li>
+                </ul>
+                <p class="o-case--paragraph"><br>Y sobre todo:</p>
+                 <ul class="o-case--list">
+                    <li>Si la capa de middle management no hace bien su trabajo de sincronizar la visión de negocio con la capa ejecutora, no hay magia que valga.</li>
+                    <li>Puedes tener el mejor equipo técnico y la mejor estrategia, pero sin alguien que traduzca, priorice y alinee, el puente se cae.</li>
+                    <li>El verdadero impacto del Product Management está justo ahí: en hacer que la idea, la ejecución y la comunicación bailen al mismo ritmo.</li>
+                </ul>
+            </section>
         </div>
-    </main>
-  </body>
+
+        <!-- Impact Section -->
+        <div class="impact-section">
+            <div class="impact-content">
+                <div class="section-label">IMPACTO CREADO (02)</div>
+                <h2 class="a-title a-title--s -highlight">Resultados e Impacto</h2>
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">45%</div>
+                        <div class="stat-label">Aumento en registros</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">32%</div>
+                        <div class="stat-label">Reducción en tasa de rebote</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2.5x</div>
+                        <div class="stat-label">Tiempo en sitio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
-
-

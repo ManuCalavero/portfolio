@@ -1,0 +1,25 @@
+.a-kpi-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.a-kpi-list__item {
+    width: 180px;
+}
+
+.a-kpi-list__item + .a-kpi-list__item {
+    margin-left: 32px;
+}
+
+.a-kpi-list--figure {
+    font-size: var(--fs-xl-l);
+    font-family: var(--f-font-special);
+    line-height: 1;
+}
+
+@media (min-width: 1020px) {
+    .a-kpi-list__item {
+        width: 300px;
+    }
+}

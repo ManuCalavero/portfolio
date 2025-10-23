@@ -11,26 +11,19 @@
 }
 
 .a-title--m {
-    font-size: var(--fs-xl-l);
+    font-size: var(--fs-l-l);
     line-height: 0.85;
     margin-bottom: 32px;
 }
 
-.a-title--xxl {
-    font-size: 24.85vw;
-    line-height: 0.85;
-    text-overflow: clip;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-
 .a-title--xl {
     font-size: 10.85vw;
     line-height: 0.85;
-    text-overflow: clip;
-    overflow: hidden;
-    white-space: nowrap;
+}
+
+.a-title--xxl {
+    font-size: 72px;
+    letter-spacing: -6px;
 }
 
 .a-title--ghost {
@@ -43,6 +36,13 @@
     text-decoration: none;
 }
 
+
+@media screen and (min-width: 1020px) {
+    .a-title--xxl {
+        font-size: 106px;
+    }
+}
+
 @media screen and (min-width: 1020px) {
     .a-title--s {
         font-size: var(--fs-l-l);
@@ -50,31 +50,32 @@
         margin-bottom: 32px;
     }
 
+    .a-title--m {
+        font-size: var(--fs-xl-xl);
+        line-height: 0.85;
+    }  
+
     .a-title--xxl {
-        font-size: 25.5vw;
+        font-size: 160px;
         line-height: 0.88;
+        letter-spacing: -6px;
     }
 }
 
-@media screen and (min-width: 1020px) {
-    .a-title--m {
-        font-size: var(--fs-xxl-xl);
-        line-height: 0.85;
-    }
-
+@media screen and (min-width: 1279px) {
     .a-title--xxl {
-        font-size: 25vw
-    }    
+        font-size: 160px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
-    .a-title--xxl {
-        font-size: 25.3vw
-    }    
-  }
+     .a-title--xxl {
+        font-size: 180px;
+    }
+}
 
-@media screen and (min-width: 1900px) {
-    .a-title--xxl {
-        font-size: 25.5vw
-    }    
-  }
+@media screen and (min-width: 1600px) {
+     .a-title--xxl {
+        font-size: 190px;
+    }
+}

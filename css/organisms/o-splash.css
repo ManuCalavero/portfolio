@@ -5,19 +5,16 @@
 	animation-timing-function: linear;
     position: relative;
     font-size: var(--fs-s-m);
+    margin-top: 88px;
 }
 
 .o-splash__sub-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     width: 100%;
     display: flex;
-    flex: row;
+    flex-direction: column;
     margin-top: 16px;
     padding-top: 12px;
-    border-top: 1px solid var(--c-text-color);
-    align-items: center;
+    align-items: start;
 }
 
 .o-splash__sub-header--cell {
@@ -26,32 +23,78 @@
 
 .o-splash__sub-header--cell-double {
     flex: 2.5;
+    margin-top: 32px;
 }
 
-.o-splash__sub-header--cell:last-child {
-    text-align: right;
-    display: none;
+.o-splash__poster {
+    margin-top: var(--fs-xl-l);
+    display: flex;
+    flex-direction: row;
+    gap: var(--fs-m-l);
 }
 
 .o-splash--image {
     display: block;
-    width: 100%;
+    flex: 1;
+    width: 50%;
     height: auto;
-    margin: 16px 0;
+    margin-top: -180px;
+}
+
+.o-splash--case {
+    display: none;
+}
+
+.o-portfolio__item + .o-portfolio__item {
+    margin-top: var(--fs-l-s);
 }
 
 
+.o-splash--line {
+    display: none;
+}
+
+.o-splash--line path{
+    stroke: lime;
+}
+
 @media screen and (min-width: 1020px) {
     .o-splash {
+        margin-top: 0;
+        padding-top: var(--fs-xxl-xl);
         font-size: var(--fs-m-s);
     }
 
+    .o-splash--image {
+        margin-top: 0;
+    }
+
     .o-splash__sub-header {
-        margin-top: 32px;
+        flex-direction: row;
+        margin: var(--fs-xl-s) 0;
         padding-top: 16px;
     }
 
-    .o-splash__sub-header--cell:last-child {
+    .o-splash--line {
         display: block;
+        position: absolute;
+        right: -320px;
+        transform: rotate(61deg) scale(1, 1);
+        bottom: -220px;
+        height: 28px;
+    }
+
+    .o-splash--case {
+        display: block;
+        flex: 1;
+        width: 50%;
+        height: 899px;
+        background-color: var(--c-pearl);
+        border-radius: 32px;
+    }
+
+
+    .o-splash__sub-header--cell-double {
+        margin-top: 0;
     }
 }
