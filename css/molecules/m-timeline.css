@@ -17,7 +17,14 @@
 }
 
 .m-timeline__cell a {
+    transition: opacity 0.3s ease;
     display: inline-block;
+    color: var(--c-amber-color);
+    text-decoration: none;
+}
+
+.m-timeline__cell a:hover {
+    opacity: 0.5;
 }
 
 .m-timeline__cell--double {

@@ -1,5 +1,7 @@
 .m-contact {
     position: relative;
+	max-width: 720px;
+	margin: 0 auto;
     padding: 120px 0 0;
 }
 
@@ -64,7 +66,7 @@
 
 @media screen and (min-width: 1020px) {
     .m-contact {
-        margin-top: var(--fs-xxl-xl);
+        margin: var(--fs-xxl-xl) auto 0;
         padding: 0;
     }
 

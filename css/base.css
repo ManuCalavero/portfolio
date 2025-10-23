@@ -81,10 +81,9 @@ body {
   display: inline-block;
   position: absolute;
   height: 120px;
-  right: 420px;
+  right: 108px;
   z-index: 200;
 }
-
 
 .o-greeting__hand img {
   height: 100%;
@@ -110,12 +109,13 @@ body {
   position: relative;
   display: inline-block;
   margin: 0 auto 32px;
-  border: 1px solid rgba(0, 172, 46, 0.4);
-  background-color: rgba(0, 172, 46, 0.1);
+  border: 1px solid rgba(0, 172, 46, 0.2);
+  background: linear-gradient(180deg,rgba(0, 172, 46, 0.2) 0%, rgba(0, 250, 83, 0.05) 100%);
+  box-shadow: 0 4px 30px rgba(0, 172, 46, 0.1);
   color: rgb(2, 80, 23);
   font-size: 15px;
-  padding: 4px 16px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 25px;
 }
 
 .-pill::after {

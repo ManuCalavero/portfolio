@@ -30,15 +30,20 @@
     margin-top: var(--fs-xl-l);
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: var(--fs-m-l);
 }
 
 .o-splash--image {
     display: block;
-    flex: 1;
-    width: 50%;
-    height: auto;
+    width: 558px;
     margin-top: -180px;
+}
+
+.o-splash--reel {
+    height: 712px;
+    width: 558px;
+    border-radius: 25px;
 }
 
 .o-splash--case {
@@ -87,10 +92,14 @@
     .o-splash--case {
         display: block;
         flex: 1;
-        width: 50%;
-        height: 899px;
+        width: 558px;
+        height: 712px;
         background-color: var(--c-pearl);
         border-radius: 32px;
+    }
+
+    .o-splash--case img {
+        height: 100%;
     }
 
 

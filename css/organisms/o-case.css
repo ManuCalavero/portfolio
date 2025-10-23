@@ -1,4 +1,4 @@
-.o-case {
+.o-case__inner {
     position: relative;
     min-height: 100%;
     height: auto;
@@ -6,9 +6,36 @@
     padding: 72px 16px 16px;
 }
 
+.o-case--subtitle {
+    font-size: 24px;
+}
+
+.o-case--paragraph,
+.o-case--list {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.o-case--paragraph + .o-case--paragraph {
+    margin-top: 16px;
+}
+
+.o-case--list {
+   margin-top: 24px;
+}
+
+.o-case--list li::before{
+    content: "• ";
+}
+
+
+.o-case p {
+    color: var(--c-text-case-color);
+}
+
 
 @media screen and (min-width: 1020px) {
-    .o-case {
+    .o-case__inner {
         position: relative;
         max-width: 1340px;
         padding: 220px 32px 32px;
