@@ -24,8 +24,14 @@
    margin-top: 24px;
 }
 
-.o-case--list li::before{
+/* .o-case--list li::before{
     content: "• ";
+} */
+
+.o-case--table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 
@@ -40,5 +46,6 @@
         max-width: 1340px;
         padding: 220px 32px 32px;
     }
+    
     
 }

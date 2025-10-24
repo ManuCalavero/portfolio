@@ -1,0 +1,50 @@
+.o-separator {
+    display: flex;
+    flex-direction: column;
+    margin-top: 72px;
+    border-radius: 16px;
+    padding: 32px;
+    background-color: var(--c-text-color);
+    color: var(--c-nuclear-color);
+}
+
+.o-separator strong {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.o-separator figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 16px;
+    padding: 8px;
+    background-color: #301A0F;
+    border-radius: 8px;
+}
+
+.o-separator figure path {
+     width: 24px;
+    height: 24px;
+}
+
+
+.o-separator figure path {
+    stroke: #EC7E39;
+}
+
+.o-separator__cell {
+    flex: 1;
+}
+
+
+
+@media screen and (min-width: 1020px) {
+    .o-separator {
+        flex-direction: row;
+        gap: 32px;
+    }
+}
