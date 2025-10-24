@@ -81,7 +81,7 @@ body {
   display: inline-block;
   position: absolute;
   height: 120px;
-  right: 108px;
+  right: 0;
   z-index: 200;
 }
 
@@ -247,6 +247,10 @@ body {
 
   .-sparks {
     right: 0;
+  }
+
+  .o-greeting__hand {
+    right: 108px;
   }
 }
 

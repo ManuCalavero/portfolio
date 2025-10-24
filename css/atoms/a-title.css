@@ -11,8 +11,8 @@
 }
 
 .a-title--m {
-    font-size: var(--fs-l-l);
-    line-height: 0.85;
+    font-size: var(--fs-l-s);
+    line-height: 1;
     margin-bottom: 32px;
 }
 
