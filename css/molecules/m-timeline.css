@@ -1,55 +1,144 @@
+/* ===================================================
+TIMELINE — "the mess I found → what I made of it"
+=====================================================*/
+
+.m-timeline-block {
+    margin: 72px 0 0;
+    padding: 0 24px;
+}
+
+.m-timeline__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* LEGEND (tags live in atoms/a-tag.css) */
+.m-timeline__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* LIST */
 .m-timeline {
     position: relative;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .m-timeline__item {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid var(--c-text-color);
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas:
+        "year  who"
+        "story story"
+        "tag   link";
+    gap: 12px 16px;
+    align-items: start;
+    padding: 24px 0;
+    border-top: 1px solid rgba(49, 42, 40, 0.2);
+    transition: opacity 280ms ease-in-out;
+}
+
+.m-timeline__year {
+    grid-area: year;
+    font-size: var(--fs-s-l);
+    opacity: 0.6;
+}
+
+.m-timeline__who { grid-area: who; }
+
+.m-timeline__company {
     font-size: var(--fs-m-s);
 }
 
-.m-timeline__cell {
-    flex: 1;
-    padding: var(--fs-m-s) 0;
+.m-timeline__role {
+    font-size: var(--fs-s-m);
+    opacity: 0.6;
 }
 
-.m-timeline__cell a {
-    transition: opacity 0.3s ease;
-    display: inline-block;
-    color: var(--c-amber-color);
-    text-decoration: none;
-}
-
-.m-timeline__cell a:hover {
-    opacity: 0.5;
-}
-
-.m-timeline__cell--double {
-    flex: 2;
-}
-
-.m-timeline__item--header {
-    font-weight: bold;
+.m-timeline__story {
+    grid-area: story;
     font-size: var(--fs-s-l);
 }
 
-.m-timeline__item--content {
-    margin-top: 0.5rem;
+.m-timeline__from {
+    opacity: 0.55;
+}
+
+.m-timeline .a-tag {
+    grid-area: tag;
+    justify-self: start;
+}
+
+.m-timeline__link {
+    grid-area: link;
+    justify-self: end;
+    align-self: center;
+    font-size: var(--fs-s-l);
+    color: var(--c-amber-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.m-timeline__link:hover {
+    opacity: 0.5;
+}
+
+/* FILTER: dim rows that don't match the active tag */
+.m-timeline[data-filter] .m-timeline__item {
+    opacity: 0.2;
+}
+
+.m-timeline[data-filter="uncertainty"] .m-timeline__item[data-tag="uncertainty"],
+.m-timeline[data-filter="complexity"] .m-timeline__item[data-tag="complexity"],
+.m-timeline[data-filter="focus"] .m-timeline__item[data-tag="focus"] {
+    opacity: 1;
 }
 
 @media screen and (min-width: 1020px) {
+    .m-timeline-block {
+        margin-top: 180px;
+        padding: 0;
+    }
+
+    .m-timeline__header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 56px;
+    }
+
+    .m-timeline__legend {
+        justify-content: flex-end;
+        max-width: 520px;
+    }
+
     .m-timeline__item {
-        flex-direction: row;   
+        grid-template-columns: 72px 220px minmax(0, 1fr) 140px 96px;
+        grid-template-areas: "year who story tag link";
+        gap: 24px;
+        padding: 28px 0;
     }
 
-    .m-timeline__item:last-child {
-        border-bottom: none;
+    .m-timeline__year,
+    .m-timeline__story {
+        font-size: var(--fs-m-s);
     }
 
-    .m-timeline__cell:last-child {
-       text-align: right;
+    .m-timeline__company {
+        font-size: var(--fs-m);
+        line-height: 1.1;
+    }
+
+    .m-timeline .a-tag {
+        align-self: center;
+    }
+
+    .m-timeline__link {
+        text-align: right;
     }
 }

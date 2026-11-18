@@ -43,32 +43,66 @@
     display: block;
     width: 110px;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .o-portfolio--title {
-    margin: 0 0 16px;
+    margin: 0 0 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
 .o-portfolio--link {
     transition: background-color 280ms ease-in-out, color 280ms ease-in-out;
-    display: inline-block;
-    width: 220px;
-    margin-bottom: 24px;
-    padding: 16px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    margin: 8px 0 24px;
+    padding: 12px 22px;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: var(--fs-s-l);
     text-decoration: none;
     color: var(--c-text-color);
     border: 1px solid var(--c-text-color);
-    text-align: center;
 }
-
+.o-portfolio--link span {
+    transition: transform 280ms ease-in-out;
+}
 .o-portfolio--link:hover{
     background-color: var(--c-text-color);
     color: var(--c-nuclear-color);
+}
+.o-portfolio--link:hover span {
+    transform: translateX(3px);
+}
+
+/* Line breaks in titles are for desktop only */
+.o-portfolio--title br {
+    display: none;
+}
+
+/* Card meta: role · year, under the title */
+.o-portfolio__meta {
+    margin-bottom: 16px;
+    font-size: var(--fs-s-l);
+    opacity: 0.6;
+}
+
+/* Hover: card warms up, poster lifts */
+.o-portfolio__item {
+    transition: background-color 400ms ease-in-out;
+}
+.o-portfolio__item:hover {
+    background-color: #F1EDE7;
+}
+.o-portfolio__poster {
+    transition: transform 400ms ease-in-out, box-shadow 400ms ease-in-out;
+    box-shadow: 0 8px 24px rgba(49, 42, 40, 0.06);
+}
+.o-portfolio__item:hover .o-portfolio__poster {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(49, 42, 40, 0.12);
 }
 
 .o-portfolio--code {
@@ -149,6 +183,14 @@
 
     .o-portfolio--title{
         font-size: 40px;
+    }
+
+    .o-portfolio--title br {
+        display: inline;
+    }
+
+    .o-portfolio--link {
+        margin-bottom: 0;
     }
 
     .o-portfolio__list {

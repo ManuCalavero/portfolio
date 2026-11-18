@@ -323,12 +323,31 @@ function hideModal(){
   $('.-js-loader').delay(4400).fadeOut();
 }
 
+function timelineFilter(){
+  // Legend buttons highlight the timeline rows that share their tag
+  $('.-js-timeline-filter').click(function() {
+    var btn = $(this);
+    var timeline = $('.-js-timeline');
+    var active = btn.attr('aria-pressed') === 'true';
+
+    $('.-js-timeline-filter').attr('aria-pressed', 'false');
+
+    if (active) {
+      timeline.removeAttr('data-filter');
+    } else {
+      btn.attr('aria-pressed', 'true');
+      timeline.attr('data-filter', btn.data('tag'));
+    }
+  });
+}
+
 
 $(document).ready(function(){
   // we call the function
   scrollFades();
   // highFive();
   clickAnchor();
+  timelineFilter();
   hideModal();
 
   $('.-js-copy').click(function() {

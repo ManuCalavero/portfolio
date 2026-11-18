@@ -1,0 +1,49 @@
+/* ===================================================
+TAG — pill with a coloured dot. Also works as a <button>.
+=====================================================*/
+
+.a-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(49, 42, 40, 0.15);
+    border-radius: 20px;
+    background: none;
+    font-family: inherit;
+    font-size: var(--fs-s-m);
+    line-height: 1.2;
+    color: var(--c-text-color);
+    white-space: nowrap;
+}
+
+.a-tag::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--tag-color, var(--c-text-color));
+}
+
+.a-tag--uncertainty { --tag-color: var(--c-amber-color); }
+.a-tag--complexity  { --tag-color: var(--c-accent-text-color); }
+.a-tag--focus       { --tag-color: var(--c-dark-color); }
+
+button.a-tag {
+    cursor: pointer;
+    transition: background-color 280ms ease-in-out, color 280ms ease-in-out;
+}
+
+button.a-tag:hover {
+    border-color: var(--tag-color);
+}
+
+button.a-tag[aria-pressed="true"] {
+    border-color: var(--tag-color);
+    background-color: var(--tag-color);
+    color: var(--c-nuclear-color);
+}
+
+button.a-tag[aria-pressed="true"]::before {
+    background-color: var(--c-nuclear-color);
+}
