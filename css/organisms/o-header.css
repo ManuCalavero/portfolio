@@ -25,8 +25,33 @@
 }
 
 .o-header p,
+.o-header__title,
 .o-header nav {
   flex: 1;
+}
+
+.o-header__title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.o-header__role {
+  display: block;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+@media (min-width: 820px) {
+  .o-header__role {
+    display: inline;
+    font-size: inherit;
+  }
+
+  .o-header__role::before {
+    content: "· ";
+  }
 }
 
 .o-header .-link {
